@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Futur Ingénieur Cybersécurité</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="matrix-bg">
+        <canvas id="matrixCanvas"></canvas>
+    </div>
+    <div class="cyber-grid"></div>
+    <div class="floating-elements" id="floatingElements"></div>
+
+    <nav>
+        <div class="nav-container">
+            <div class="logo">MAMINIAINA portfolio</div>
+            <ul class="nav-links">
+                <li><a href="#accueil" onclick="showSection('accueil')">Accueil</a></li>
+                <li><a href="#apropos" onclick="showSection('apropos')">À Propos</a></li>
+                <li><a href="#projets" onclick="showSection('projets')">Projets</a></li>
+                <li><a href="#contact" onclick="showSection('contact')">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Section Accueil -->
+    <section id="accueil" class="section">
+        <div class="container hero">
+            <h1>FUTUR INGÉNIEUR CYBERSÉCURITÉ</h1>
+            <div class="typing-effect" id="typingText"></div>
+            <div class="terminal">
+                <div class="terminal-header">
+                    <div class="terminal-dot dot-red"></div>
+                    <div class="terminal-dot dot-yellow"></div>
+                    <div class="terminal-dot dot-green"></div>
+                </div>
+                <div class="terminal-content">
+                    <div class="code-line">$ whoami</div>
+                    <div class="code-line">Étudiant Passerelles Numériques Madagascar</div>
+                    <div class="code-line">$ cat mission.txt</div>
+                    <div class="code-line">Protéger la sécurité en ligne des Malagasy</div>
+                    <div class="code-line">$ sudo enhance --skills</div>
+                    <div class="code-line">Enhancement successful ✓</div>
+                </div>
+            </div>
+            <div class="cv-download">
+                <a href="CV-MAMINIAINA-RANDRIANIRINA.pdf" class="download-btn" id="downloadCV">
+                    📄 Télécharger Mon CV
+                </a>
+            </div>
+            <a href="#apropos" class="cyber-button" onclick="showSection('apropos')">Découvrir Mon Profil</a>
+            <a href="#projets" class="cyber-button" onclick="showSection('projets')">Voir Mes Projets</a>
+        </div>
+    </section>
+
+    <!-- Section À Propos -->
+    <section id="apropos" class="section hidden">
+        <div class="container">
+            <h2 class="section-title">À PROPOS DE MOI</h2>
+            
+            <!-- Section Photo de Profil -->
+            <div class="profile-section">
+                <div class="profile-image-container">
+                    <img src="photo.jpg" 
+                         alt="Photo de profil" 
+                         class="profile-image" 
+                         id="profileImage">
+                    <div class="profile-upload" onclick="document.getElementById('imageUpload').click()">
+                        <span>📷</span>
+                        <input type="file" id="imageUpload" accept="image/*">
+                    </div>
+                </div>
+                <h3 style="color: #00ff41; font-size: 1.5rem; margin-bottom: 0.5rem;">Étudiant Cybersécurité</h3>
+                <p style="color: #888; font-size: 1.1rem;">Passerelles Numériques Madagascar</p>
+            </div>
+            
+            <div class="about-grid">
+                <div class="about-text">
+                    <h3>Passion & Mission</h3>
+                    <p>Actuellement en année préparatoire chez Passerelles Numériques Madagascar, je me prépare à devenir ingénieur en cybersécurité. Ma mission : contribuer à la sécurité en ligne des Malagasy et protéger notre écosystème numérique.</p>
+                    <p>La cybersécurité n'est pas seulement un métier pour moi, c'est une vocation. Dans un monde de plus en plus connecté, protéger les données et les systèmes devient crucial pour le développement de Madagascar.</p>
+                </div>
+                <div class="terminal">
+                    <div class="terminal-header">
+                        <div class="terminal-dot dot-red"></div>
+                        <div class="terminal-dot dot-yellow"></div>
+                        <div class="terminal-dot dot-green"></div>
+                    </div>
+                    <div class="terminal-content">
+                        <div class="code-line">#!/bin/bash</div>
+                        <div class="code-line"># Profil Étudiant</div>
+                        <div class="code-line">FORMATION="Passerelles Numériques Madagascar"</div>
+                        <div class="code-line">OBJECTIF="Ingénieur Cybersécurité"</div>
+                        <div class="code-line">MISSION="Sécuriser Madagascar"</div>
+                        <div class="code-line">STATUS="En formation active"</div>
+                    </div>
+                </div>
+            </div>
+            
+            <h3 style="text-align: center; margin: 3rem 0 2rem; color: #00ff41; font-size: 2rem;">MES COMPÉTENCES</h3>
+            <div class="skills-container">
+                <div class="skill-card">
+                    <h4>💻 Programmation</h4>
+                    <p><strong>Python</strong> - Traitement automatique, scripts sécurité</p>
+                    <p><strong>JavaScript</strong> - Développement web, mini-jeux</p>
+                    <p><strong>Java</strong> - Applications robustes</p>
+                </div>
+                <div class="skill-card">
+                    <h4>🌐 Web & Design</h4>
+                    <p><strong>HTML/CSS</strong> - Pages web modernes</p>
+                    <p><strong>Design UX/UI</strong> - Interfaces utilisateur</p>
+                    <p><strong>Responsive Design</strong> - Multi-plateformes</p>
+                </div>
+                <div class="skill-card">
+                    <h4>🔒 Réseaux & Sécurité</h4>
+                    <p><strong>Cisco Packet Tracer</strong> - Simulation réseau</p>
+                    <p><strong>Architecture réseau</strong> - Configuration sécurisée</p>
+                    <p><strong>Sécurité informatique</strong> - Bonnes pratiques</p>
+                </div>
+                <div class="skill-card">
+                    <h4>🎯 Soft Skills</h4>
+                    <p><strong>Gestion de projet</strong> - Organisation efficace</p>
+                    <p><strong>Art oratoire</strong> - Présentation claire</p>
+                    <p><strong>Travail d'équipe</strong> - Collaboration</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Projets -->
+    <section id="projets" class="section hidden">
+        <div class="container">
+            <h2 class="section-title">MES PROJETS</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>🌐 Simulation Réseau Cisco</h3>
+                    <p>Conception et simulation d'architectures réseau complexes avec Cisco Packet Tracer. Configuration de routeurs, switches et implémentation de protocoles de sécurité.</p>
+                    <div class="terminal" style="margin-top: 1rem;">
+                        <div class="terminal-content">
+                            <div class="code-line">Router(config)# enable secret cisco123</div>
+                            <div class="code-line">Router(config)# interface gig0/0</div>
+                            <div class="code-line">Router(config-if)# ip address 192.168.1.1 255.255.255.0</div>
+                            <div class="code-line">Configuration successful ✓</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h3>🐍 Logiciel de Traitement Automatique</h3>
+                    <p>Développement d'un outil Python pour le traitement automatique des réponses. Analyse de données, génération de rapports et optimisation des processus.</p>
+                    <div class="terminal" style="margin-top: 1rem;">
+                        <div class="terminal-content">
+                            <div class="code-line">import pandas as pd</div>
+                            <div class="code-line">import numpy as np</div>
+                            <div class="code-line">def process_responses(data):</div>
+                            <div class="code-line">    return analyzed_data</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h3>🎮 Mini-Jeu JavaScript</h3>
+                    <p>Création d'un jeu interactif en JavaScript vanilla avec animations CSS. Gestion des événements, score en temps réel et interface responsive.</p>
+                    <div class="terminal" style="margin-top: 1rem;">
+                        <div class="terminal-content">
+                            <div class="code-line">const game = new GameEngine();</div>
+                            <div class="code-line">game.init();</div>
+                            <div class="code-line">game.start();</div>
+                            <div class="code-line">Score: 2500 points! 🏆</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h3>📱 Pages Web Modernes</h3>
+                    <p>Développement de pages web responsive avec HTML5, CSS3 et JavaScript. Design moderne, animations fluides et optimisation SEO.</p>
+                    <div class="terminal" style="margin-top: 1rem;">
+                        <div class="terminal-content">
+                            <div class="code-line">&lt;!DOCTYPE html&gt;</div>
+                            <div class="code-line">&lt;html lang="fr"&gt;</div>
+                            <div class="code-line">  &lt;head&gt;&lt;meta charset="UTF-8"&gt;</div>
+                            <div class="code-line">Website deployed ✓</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Contact -->
+    <section id="contact" class="section hidden">
+        <div class="container">
+            <h2 class="section-title">CONTACTEZ-MOI</h2>
+            <div class="contact-form">
+                <h3 style="text-align: center; margin-bottom: 2rem; color: #00ff41;">Collaborons pour un Madagascar plus sûr numériquement</h3>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Nom complet</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Sujet</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="cyber-button" style="width: 100%; text-align: center;">
+                        Envoyer le Message
+                    </button>
+                </form>
+            </div>
+            
+            <div class="social-links">
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/maminiaina-randriniaina-70254b365?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="social-link link">
+                      <i class="fab fa-linkedin"></i> <span class="social-info">LinkedIn - Connections-nous</span>
+                    </a>
+                    <a href="https://www.facebook.com/pintar.orang.9" class="social-link facebook" target="_blank">
+                      <i class="fab fa-facebook"></i> <span class="social-info">Facebook - Suivez-moi</span>
+                    </a>
+                    <a href="https://wa.me/261380713062" class="social-link whatsapp" target="_blank">
+                      <i class="fab fa-whatsapp"></i> <span class="social-info">WhatsApp - Discutons!</span>
+                    </a>
+                    <a href="mailto:maminiaina.randrianiaina@etudiant.passellesnumeriques.org" class="social-link email">
+                      <i class="fas fa-envelope"></i> <span class="social-info">Email - Contactez-moi</span>
+                    </a>
+                    <a href="tel:+261380713062" class="social-link phone">
+                      <i class="fas fa-phone"></i> <span class="social-info">Téléphone - Appelez-moi</span>
+                    </a>
+                  </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 2rem;">
+                <p style="color: #00ff41; font-size: 1.2rem;">
+                    "La cybersécurité est l'affaire de tous. Ensemble, protégeons Madagascar numérique." 🇲🇬
+                </p>
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
